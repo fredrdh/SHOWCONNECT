@@ -1,0 +1,24 @@
+<!-- FILEPATH: /home/benjamin/code/Benyoumen/SHOWCONNECT/app/views/events/new.html.erb -->
+
+<h1>New Event</h1>
+
+<%= form_with(model: @event, url: events_path, method: :post) do |form| %>
+  <div>
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div>
+    <%= form.label :description %>
+    <%= form.text_area :description %>
+  </div>
+
+  <div>
+    <%= form.label :date %>
+    <%= form.date_field :date %>
+  </div>
+
+  <div>
+    <%= form.submit "Create Event" %>
+  </div>
+<% end %>
