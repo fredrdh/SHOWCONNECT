@@ -10,3 +10,14 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+.center {
+    background-color: rgb(230, 229, 229);
+    width: 50%;
+    margin: 0 auto;
+    padding: 0 auto;
+}
+
+.custom-button {
+  background-color: red;
+}
