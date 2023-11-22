@@ -19,29 +19,6 @@
         </nav>
     </header>
 
-    <%# home.html.erb %>
-<%- unless controller_name == 'sessions' %>
-  <%= link_to "Log in", new_session_path(users) %><br />
-<% end %>
-
-<%- if devise_mapping.registerable? && controller_name != 'registrations' %>
-  <%= link_to "Sign up", new_registration_path(users) %><br />
-<% end %>
-
-<%- if devise_mapping.recoverable? && controller_name != 'passwords' %>
-  <%= link_to "Forgot your password?", new_password_path(users) %><br />
-<% end %>
-
-<%- if devise_mapping.confirmable? && controller_name != 'confirmations' %>
-  <%= link_to "Didn't receive confirmation instructions?", new_confirmation_path(users) %><br />
-<% end %>
-
-<%- if devise_mapping.lockable? && resource_class.unlock_strategy_enabled?(:email) && controller_name != 'unlocks' %>
-  <%= link_to "Didn't receive unlock instructions?", new_unlock_path(users) %><br />
-<% end %>
-<%# Main content of the homepage goes here %>
-
-
 
     <section class="hero">
         <div class="hero-content">
@@ -57,4 +34,4 @@
         <p>© 2023 Company Name</p>
     </footer>
 </body>
-</html
+</html>

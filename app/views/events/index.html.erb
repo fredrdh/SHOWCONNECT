@@ -1,1 +1,29 @@
-rails generate migration AddIndexToEventViews
+<%# <% @events.each do |event| %>
+<%# <div> %>
+  <%# <h2><%= event.stage_name %>
+  <%# <p><strong>Categoria:</strong> <%= event.category %>
+  <%# <p><strong>Especialidade:</strong> <%= event.local %>
+  <%# <p><strong>Descrição:</strong> <%= event.description %>
+  <%# <p><strong>Local:</strong> <%= event.local %>
+  <%# <p><strong>Data:</strong> <%= event.event_date%>
+  <%# <p><strong>Preço:</strong> <%= event.price %>
+<%# </div> %>
+<%# <% end %>
+<%# Assuming you have a header and other common elements included in your application layout %>
+
+<%# index.html.erb %>
+<div class="events-container">
+  <% @events.each do |event| %>
+    <div class="event-card">
+      <h2 class="event-title"><%= event.stage_name %></h2>
+      <%# find a picture for each band %>
+      <%# <%= image_tag event.image_url, class: "event-image" if event.image_url.present? %>
+      <p class="event-detail"><strong>Categoria:</strong> <%= event.category %></p>
+      <p class="event-detail"><strong>Especialidade:</strong> <%= event.specialty %></p>
+      <p class="event-detail"><strong>Descrição:</strong> <%= event.description %></p>
+      <p class="event-detail"><strong>Local:</strong> <%= event.local %></p>
+      <p class="event-detail"><strong>Data:</strong> <%= l(event.event_date, format: :long) %></p>
+      <p class="event-detail"><strong>Preço:</strong> <%= number_to_currency(event.price, unit: "R$ ", separator: ",", delimiter: ".") %></p>
+    </div>
+  <% end %>
+</div>

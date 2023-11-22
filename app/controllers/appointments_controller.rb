@@ -19,6 +19,7 @@ def create
   else
     render :new
   end
+end
 
 def edit
   @appointment = Appointment.find(params[:id])
@@ -41,3 +42,4 @@ end
   def appointment_params
     params.require(:appointment).permit(:stage_name, :category, :specialty, :description, :local, :event_date, :price)
   end
+end
