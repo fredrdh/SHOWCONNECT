@@ -2,7 +2,7 @@ Appointment.destroy_all
 Event.destroy_all
 User.destroy_all
 
-5.times do
+15.times do
   User.create!(
     name: Faker::Name.name,
     email: Faker::Internet.email,
@@ -11,7 +11,7 @@ User.destroy_all
   )
 end
 
-5.times do
+15.times do
   Event.create!(
     stage_name: Faker::Music.band,
     category: ["concert", "convention", "music"].sample,
@@ -23,7 +23,7 @@ end
     price: Faker::Number.within(range: 300..1000)
   )
 
-  5.times do
+15.times do
     Appointment.create!(
       user_id: User.all.pluck(:id).sample,
       event_id: Event.all.pluck(:id).sample,

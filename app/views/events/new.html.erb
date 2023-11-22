@@ -2,23 +2,21 @@
 
 <h1>New Event</h1>
 
-<%= form_with(model: @event, url: events_path, method: :post) do |form| %>
-  <div>
-    <%= form.label :title %>
-    <%= form.text_field :title %>
-  </div>
+<%= simple_form_for @event, url: events_path, method: :post do |form| %>
 
-  <div>
-    <%= form.label :description %>
-    <%= form.text_area :description %>
-  </div>
+  <%= form.input :stage_name %>
 
-  <div>
-    <%= form.label :date %>
-    <%= form.date_field :date %>
-  </div>
+  <%= form.input :category, as: :string %>
 
-  <div>
-    <%= form.submit "Create Event" %>
-  </div>
+  <%= form.input :specialty, as: :string %>
+
+  <%= form.input :description, as: :text %>
+
+  <%= form.input :local, as: :string %>
+
+  <%= form.input :event_date, as: :date %>
+
+  <%= form.input :price, as: :integer %>
+
+  <%= form.button :submit, "Create Event" %>
 <% end %>
