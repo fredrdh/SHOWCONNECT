@@ -8,5 +8,4 @@ class PagesController < ApplicationController
   def pagamento
   end
 
-
 end
