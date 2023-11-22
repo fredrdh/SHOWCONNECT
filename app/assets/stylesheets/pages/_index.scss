@@ -61,3 +61,58 @@
         }
     }
 }
+
+.new-event-container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  .new-event-title {
+      color: #333;
+      text-align: center;
+      margin-bottom: 20px;
+  }
+
+  .new-event-form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+
+      .form-label {
+          display: block;
+          margin-bottom: 5px;
+          color: #333;
+          text-align: left;
+      }
+
+      .form-input,
+      .form-textarea {
+          padding: 10px;
+          border: 1px solid #ddd;
+          border-radius: 5px;
+          width: 100%;
+      }
+
+      .form-textarea {
+          min-height: 100px;
+          resize: vertical;
+      }
+
+      .btn-submit {
+          padding: 10px 15px;
+          background-color: #007bff;
+          color: white;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+
+          &:hover {
+              background-color: #0056b3;
+          }
+      }
+  }
+}
+
