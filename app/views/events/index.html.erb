@@ -1,1 +1,11 @@
-rails generate migration AddIndexToEventViews
+<% @events.each do |event| %>
+<div>
+  <h2><%= event.stage_name %></h2>
+  <p><strong>Categoria:</strong> <%= event.category %></p>
+  <p><strong>Especialidade:</strong> <%= event.local %></p>
+  <p><strong>Descrição:</strong> <%= event.description %></p>
+  <p><strong>Local:</strong> <%= event.local %></p>
+  <p><strong>Data:</strong> <%= event.event_date%></p>
+  <p><strong>Preço:</strong> <%= event.price %></p>
+</div>
+<% end %>
