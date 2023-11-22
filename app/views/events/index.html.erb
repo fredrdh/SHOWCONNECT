@@ -12,18 +12,23 @@
 <%# Assuming you have a header and other common elements included in your application layout %>
 
 <%# index.html.erb %>
+<%# index.html.erb %>
 <div class="events-container">
   <% @events.each do |event| %>
     <div class="event-card">
       <h2 class="event-title"><%= event.stage_name %></h2>
-      <%# find a picture for each band %>
       <%# <%= image_tag event.image_url, class: "event-image" if event.image_url.present? %>
-      <p class="event-detail"><strong>Categoria:</strong> <%= event.category %></p>
-      <p class="event-detail"><strong>Especialidade:</strong> <%= event.specialty %></p>
-      <p class="event-detail"><strong>Descrição:</strong> <%= event.description %></p>
-      <p class="event-detail"><strong>Local:</strong> <%= event.local %></p>
-      <p class="event-detail"><strong>Data:</strong> <%= l(event.event_date, format: :long) %></p>
-      <p class="event-detail"><strong>Preço:</strong> <%= number_to_currency(event.price, unit: "R$ ", separator: ",", delimiter: ".") %></p>
+
+      <div class="event-info">
+        <p><i class="icon-category"></i> <strong>Categoria:</strong> <%= event.category %></p>
+        <p><i class="icon-specialty"></i> <strong>Especialidade:</strong> <%= event.specialty %></p>
+        <p><i class="icon-description"></i> <strong>Descrição:</strong> <%= event.description %></p>
+        <p><i class="icon-location"></i> <strong>Local:</strong> <%= event.local %></p>
+        <p><i class="icon-date"></i> <strong>Data:</strong> <%= l(event.event_date, format: :long) %></p>
+        <p><i class="icon-price"></i> <strong>Preço:</strong> <%= number_to_currency(event.price, unit: "R$ ", separator: ",", delimiter: ".") %></p>
+      </div>
+
+      <%= link_to "See More", event_path(event), class: "btn btn-primary" %>
     </div>
   <% end %>
 </div>
