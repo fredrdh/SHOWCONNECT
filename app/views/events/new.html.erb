@@ -1,22 +1,25 @@
 <!-- FILEPATH: /home/benjamin/code/Benyoumen/SHOWCONNECT/app/views/events/new.html.erb -->
 
-<h1>New Event</h1>
+<div class="new-event-container">
+  <h1 class="new-event-title">New Event</h1>
 
-<%= simple_form_for @event, url: events_path, method: :post do |form| %>
+  <%= simple_form_for @event, url: events_path, method: :post, html: { class: 'new-event-form' } do |f| %>
 
-  <%= form.input :stage_name %>
+    <%= f.input :stage_name, label_html: { class: 'form-label' }, input_html: { class: 'form-input' } %>
 
-  <%= form.input :category, as: :string %>
+    <%= f.input :category, label_html: { class: 'form-label' }, input_html: { class: 'form-input' } %>
 
-  <%= form.input :specialty, as: :string %>
+    <%= f.input :specialty, label_html: { class: 'form-label' }, input_html: { class: 'form-input' } %>
 
-  <%= form.input :description, as: :text %>
+    <%= f.input :description, as: :text, label_html: { class: 'form-label' }, input_html: { class: 'form-textarea' } %>
 
-  <%= form.input :local, as: :string %>
+    <%= f.input :local, label_html: { class: 'form-label' }, input_html: { class: 'form-input' } %>
 
-  <%= form.input :event_date, as: :date %>
+    <%= f.input :event_date, as: :date, label_html: { class: 'form-label' }, input_html: { class: 'form-input' } %>
 
-  <%= form.input :price, as: :integer %>
+    <%= f.input :price, as: :string, label_html: { class: 'form-label' }, input_html: { class: 'form-input', placeholder: 'R$' } %>
 
-  <%= form.button :submit, "Create Event" %>
-<% end %>
+    <%= f.button :submit, "Create Event", class: 'btn-submit' %>
+
+  <% end %>
+</div>
