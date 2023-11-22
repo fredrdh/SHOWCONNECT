@@ -8,11 +8,22 @@
 </head>
 <body>
     <nav class="navbar">
-        <div class="navbar-logo">Logo</div>
+        <div class="navbar-logo">
+           <%= image_tag 'logo-ok.png', alt: 'Logo' %>
+
+        </div>
+
+        </div>
         <ul class="navbar-links">
-            <li><a href="#">Categories</a></li>
+            <li> <%= link_to "Categories", events_path %></li>
             <li><a href="#">Contact</a></li>
-            <li><a href="#">Login</a></li>
+            <% if current_user  %>
+              <%= link_to "logout", destroy_user_session_path, data: {turbo_method: :delete} %>
+            <% else %>
+              <%= link_to "login", new_user_session_path %>
+            <% end %>
+
+
         </ul>
     </nav>
 </body>
