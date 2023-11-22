@@ -1,12 +1,15 @@
 <!-- FILEPATH: /home/benjamin/code/Benyoumen/SHOWCONNECT/app/views/events/show.html.erb -->
-<h1>Event Details</h1>
+<div class="event-detail-container">
+  <h1 class="event-detail-title">Event Details</h1>
 
-<div>
-  <h2><%= @event.stage_name %></h2>
-  <p><strong>Category:</strong> <%= @event.category %></p>
-  <p><strong>Espe:</strong> <%= @event.local %></p>
-  <p><strong>Descrição:</strong> <%= @event.specialty %></p>
-  <p><strong>Local:</strong> <%= @event.local %></p>
-  <p><strong>Data:</strong> <%= @event.event_date%></p>
-  <p><strong>Preço:</strong> <%= @event.price %></p>
+  <div class="event-detail-card">
+    <h2 class="event-stage-name"><%= @event.stage_name %></h2>
+    <p class="event-detail"><strong>Category:</strong> <%= @event.category %></p>
+    <p class="event-detail"><strong>Specialty:</strong> <%= @event.specialty %></p>
+    <p class="event-detail"><strong>Description:</strong> <%= @event.description %></p>
+    <p class="event-detail"><strong>Location:</strong> <%= @event.local %></p>
+    <p class="event-detail"><strong>Date:</strong> <%= @event.event_date.strftime("%d %B %Y") %></p>
+    <p class="event-detail"><strong>Price:</strong> <%= number_to_currency(@event.price, unit: "R$ ", separator: ",", delimiter: ".") %></p>
+  </div>
 </div>
+
