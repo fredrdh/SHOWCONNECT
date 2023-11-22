@@ -18,6 +18,95 @@
     padding: 0 auto;
 }
 
-.custom-button {
-  background-color: red;
+.form-container {
+  max-width: 450px;
+  margin: 0 auto;
+  padding: 30px;
 }
+
+.form-title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+form {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.form-group {
+  margin-bottom: 25px;
+}
+
+label {
+  font-size: 18px;
+  display: block;
+}
+
+.form-control {
+  border-radius: 5px;
+  padding: 12px 15px;
+}
+
+.btn {
+  padding: 12px 0;
+  font-size: 18px;
+  border-radius: 10px;
+  background: #5775f9;
+  color: #fff;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    background: darken(#5775f9, 5%);
+  }
+}
+
+.links {
+  margin-top: 20px;
+  text-align: center;
+
+  a {
+    color: #5775f9;
+  }
+}
+
+.login-form {
+  max-width: 400px;
+  margin: 30px auto;
+  // border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 4px;
+  // background-color: #fff;
+}
+
+.login-title {
+  text-align: center;
+  margin-bottom: 30px
+}
+
+.form-control {
+  border-radius: 3px;
+  padding: 12px 10px;
+}
+
+.submit-btn {
+  background-color: #6C63FF;
+  color: white;
+  padding: 12px 0;
+  border-radius: 3px;
+  border: none;
+  width: 100%;
+  cursor: pointer;
+
+  &:hover {
+    background-color: darken(#6C63FF, 5%);
+  }
+}
+
+// .custom-button {
+//   background-color: red;
+// }
