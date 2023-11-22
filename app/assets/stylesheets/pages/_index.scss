@@ -1,6 +1,23 @@
 // Import page-specific CSS files here.
 @import "home";
 
+
+.navbar  {
+  color:#E3382B;
+  }
+  .hero {
+    color:#fff;
+    border: 1px solid #20273E;
+    background-image: url(https://st.depositphotos.com/2230996/2388/i/450/depositphotos_23885249-stock-photo-magic-of-music.jpg);
+  }
+
+img  background-image{
+  width: 100vh;
+}
+.hero-content {
+  p {
+    font-size: 22px;
+  }
 .events-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -59,6 +76,8 @@
         &:hover {
             background-color: #0056b3;
         }
+
+      }
     }
 }
 

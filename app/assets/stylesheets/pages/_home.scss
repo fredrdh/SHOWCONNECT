@@ -1,4 +1,5 @@
 body {
+
   font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
@@ -14,10 +15,10 @@ header {
       justify-content: space-between;
       align-items: center;
       margin: 0 auto;
-      width: 90%;
+      width: 60%;
 
       .logo {
-          font-size: 1.5rem;
+          font-size: 3rem;
       }
 
       ul {
@@ -52,13 +53,13 @@ header {
       max-width: 600px;
 
       h1 {
-          font-size: 2.5rem;
+          font-size: 3.5rem;
       }
 
       .btn-primary {
           background-color: #007bff;
           color: white;
-          border: none;
+          border: 1px solid white;
           padding: 10px 20px;
           cursor: pointer;
           border-radius: 5px;
