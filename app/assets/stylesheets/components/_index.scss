@@ -9,7 +9,6 @@
   font-family: Arial
 }
 
-
 .name-slogan {
   padding: 40px 40px;
   margin: 5px;
@@ -28,7 +27,6 @@
   background-size: cover;
   position: relative;
 
-
 }
 .btn-flat{
   color:rgb(34, 230, 34);
@@ -36,4 +34,39 @@
 .container {
   margin: 20px 40px;
   padding: 8px 20px;
+}
+
+.event-detail-container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background: white;
+  border-radius: 5px;
+
+  .event-detail-title {
+      color: #333;
+      text-align: center;
+      margin-bottom: 20px;
+  }
+
+  .event-detail-card {
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+
+      .event-stage-name {
+          color: #007bff;
+          margin-bottom: 15px;
+      }
+
+      .event-detail {
+          color: #666;
+          margin: 10px 0;
+
+          strong {
+              color: #333;
+          }
+      }
+  }
 }
