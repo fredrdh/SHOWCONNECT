@@ -4,36 +4,8 @@
 @import "form_legend_clear";
 @import "navbar";
 
-.navbar-text {
-  font-size: 22px;
-  font-family: fantasy;
-}
+// .navbar-text {
+//   font-size: 22px;
+//   font-family: fantasy;
+// }
 
-
-.name-slogan {
-  padding: 40px 40px;
-  margin: 5px;
-  color:rgb(29, 29, 226);
-  font-size: 46px;
-
-}
-
-.banner {
-  color:rgb(230, 19, 19);
-  object-fit: cover;
-  width: 100%;
-  height: 91.5vh;
-  background-repeat: no-repeat;
-  background-position: center; // Adicionado para centralizar a imagem
-  background-size: cover;
-  position: relative;
-
-
-}
-.btn-flat{
-  color:rgb(34, 230, 34);
-}
-.container {
-  margin: 20px 40px;
-  padding: 8px 20px;
-}
