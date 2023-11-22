@@ -58,7 +58,6 @@ header {
 
       .btn-primary {
           background-color: #007bff;
-          color: white;
           border: 1px solid white;
           padding: 10px 20px;
           cursor: pointer;
@@ -68,6 +67,14 @@ header {
           &:hover {
               background-color: #0056b3;
           }
+
+          a {
+            color: white;
+            text-decoration: none;
+            &:hover {
+                color: #fff;
+            }
+        }
       }
   }
 }
