@@ -1,11 +1,34 @@
-<% @events.each do |event| %>
-<div>
-  <h2><%= event.stage_name %></h2>
-  <p><strong>Categoria:</strong> <%= event.category %></p>
-  <p><strong>Especialidade:</strong> <%= event.local %></p>
-  <p><strong>Descrição:</strong> <%= event.description %></p>
-  <p><strong>Local:</strong> <%= event.local %></p>
-  <p><strong>Data:</strong> <%= event.event_date%></p>
-  <p><strong>Preço:</strong> <%= event.price %></p>
+<%# <% @events.each do |event| %>
+<%# <div> %>
+  <%# <h2><%= event.stage_name %>
+  <%# <p><strong>Categoria:</strong> <%= event.category %>
+  <%# <p><strong>Especialidade:</strong> <%= event.local %>
+  <%# <p><strong>Descrição:</strong> <%= event.description %>
+  <%# <p><strong>Local:</strong> <%= event.local %>
+  <%# <p><strong>Data:</strong> <%= event.event_date%>
+  <%# <p><strong>Preço:</strong> <%= event.price %>
+<%# </div> %>
+<%# <% end %>
+<%# Assuming you have a header and other common elements included in your application layout %>
+
+<%# index.html.erb %>
+<%# index.html.erb %>
+<div class="events-container">
+  <% @events.each do |event| %>
+    <div class="event-card">
+      <h2 class="event-title"><%= event.stage_name %></h2>
+      <%# <%= image_tag event.image_url, class: "event-image" if event.image_url.present? %>
+
+      <div class="event-info">
+        <p><i class="icon-category"></i> <strong>Categoria:</strong> <%= event.category %></p>
+        <p><i class="icon-specialty"></i> <strong>Especialidade:</strong> <%= event.specialty %></p>
+        <p><i class="icon-description"></i> <strong>Descrição:</strong> <%= event.description %></p>
+        <p><i class="icon-location"></i> <strong>Local:</strong> <%= event.local %></p>
+        <p><i class="icon-date"></i> <strong>Data:</strong> <%= l(event.event_date, format: :long) %></p>
+        <p><i class="icon-price"></i> <strong>Preço:</strong> <%= number_to_currency(event.price, unit: "R$ ", separator: ",", delimiter: ".") %></p>
+      </div>
+
+      <%= link_to "See More", event_path(event), class: "btn btn-primary" %>
+    </div>
+  <% end %>
 </div>
-<% end %>
