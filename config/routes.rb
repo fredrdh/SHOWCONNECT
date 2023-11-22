@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
 
-  root to: "posts#index"  # Defines the root path route ("/")
+  root to: "pages#home"  # Defines the root path route ("/")
 
   resources :appointments, only: %i[create destroy]
   resources :users, only: [:show]
