@@ -1,1 +1,79 @@
-// Specific CSS for your home-page
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #E3382B;
+  color: white;
+  padding: 1rem 0;
+
+  nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0 auto;
+      width: 90%;
+
+      .logo {
+          font-size: 1.5rem;
+      }
+
+      ul {
+          list-style: none;
+          display: flex;
+
+          li {
+              margin-left: 20px;
+
+              a {
+                  color: white;
+                  text-decoration: none;
+                  &:hover {
+                      color: #ddd;
+                  }
+              }
+          }
+      }
+  }
+}
+
+.hero {
+  background: url('path-to-your-background-image.jpg') no-repeat center center/cover;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+
+  .hero-content {
+      max-width: 600px;
+
+      h1 {
+          font-size: 2.5rem;
+      }
+
+      .btn-primary {
+          background-color: #007bff;
+          color: white;
+          border: none;
+          padding: 10px 20px;
+          cursor: pointer;
+          border-radius: 5px;
+          margin-top: 20px;
+
+          &:hover {
+              background-color: #0056b3;
+          }
+      }
+  }
+}
+
+footer {
+  background-color: #E3382B;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+}
