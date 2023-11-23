@@ -3,11 +3,5 @@ Rails.application.routes.draw do
 
   resources :events
   root to: "pages#home"  # Defines the root path route ("/")
-  #   get 'pagamentos', to: 'pages#pagamentos'
-
-  
+  resources :appointments, only: [:index, :show, :new, :create, :destroy]
   end
-
-
-#   get "up" => "rails/health#show", as: :rails_health_check
-#   get 'categorias', to: 'pages#categorias'

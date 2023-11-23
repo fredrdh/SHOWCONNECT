@@ -1,0 +1,21 @@
+<!-- FILEPATH: /home/benjamin/code/Benyoumen/SHOWCONNECT/app/views/appointments/new.html.erb -->
+
+<div class="appointment-form-container">
+  <h1 class="appointment-form-title">New Appointment</h1>
+
+  <%= form_for @appointment do |f| %>
+    <div class="field">
+      <%= f.label :title, class: 'form-label' %>
+      <%= f.text_field :title, class: 'form-input' %>
+    </div>
+
+    <div class="field">
+      <%= f.label :description, class: 'form-label' %>
+      <%= f.text_area :description, class: 'form-textarea' %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit "Create Appointment", class: 'btn-submit' %>
+    </div>
+  <% end %>
+</div>

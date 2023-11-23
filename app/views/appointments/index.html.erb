@@ -1,0 +1,24 @@
+<div class="appointments-container">
+  <h1>Appointments</h1>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Time</th>
+        <th>Location</th>
+        <!-- Add more table headers if needed -->
+      </tr>
+    </thead>
+    <tbody>
+      <% @appointments.each do |appointment| %>
+        <tr>
+          <td><%= appointment.timeslot ? appointment.timeslot.to_date : 'No date set' %></td>
+          <td><%= appointment.timeslot ? appointment.timeslot.strftime("%H:%M") : 'No time set' %></td>
+          <td><%= appointment.location %></td>
+          <!-- Add more table cells if needed -->
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

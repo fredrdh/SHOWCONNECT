@@ -118,3 +118,143 @@ img  background-image{
   }
 }
 
+// here is the styling for the "Show page" of Appointments
+.appointment-details-container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: left;
+
+  .appointment-details-title {
+      color: #333;
+      text-align: center;
+      margin-bottom: 20px;
+  }
+
+  .appointment-info {
+      p {
+          color: #666;
+          margin: 10px 0;
+
+          strong {
+              color: #333;
+          }
+      }
+  }
+}
+// here is the styling for the "New page" of Events
+.appointment-form-container, .appointment-list-container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: left;
+
+  .appointment-form-title, .appointment-list-title {
+      color: #333;
+      text-align: center;
+      margin-bottom: 20px;
+  }
+
+  .field {
+      margin-bottom: 15px;
+
+      .form-label {
+          display: block;
+          margin-bottom: 5px;
+          color: #333;
+      }
+
+      .form-input, .form-textarea {
+          width: 100%;
+          padding: 10px;
+          border: 1px solid #ddd;
+          border-radius: 5px;
+      }
+
+      .form-textarea {
+          min-height: 100px;
+          resize: vertical;
+      }
+  }
+
+  .btn-submit {
+      padding: 10px 15px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+
+      &:hover {
+          background-color: #0056b3;
+      }
+  }
+
+  .appointments-table {
+      width: 100%;
+      margin-top: 20px;
+      border-collapse: collapse;
+
+      th, td {
+          border: 1px solid #ddd;
+          padding: 8px;
+          text-align: left;
+      }
+
+      th {
+          background-color: #f4f4f4;
+          color: #333;
+      }
+  }
+}
+// here is the styling for the "Index page" of Events
+.appointments-container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: left;
+
+
+  h1 {
+      color: #333;
+      text-align: center;
+      margin-bottom: 20px;
+  }
+
+  table {
+      width: 100%;
+      margin-top: 10px;
+      border-collapse: collapse;
+
+      thead {
+          tr {
+              th {
+                  background-color: #f4f4f4;
+                  color: #333;
+                  padding: 8px;
+                  text-align: left;
+                  border: 1px solid #ddd;
+              }
+          }
+      }
+
+      tbody {
+          tr {
+              td {
+                  padding: 8px;
+                  border: 1px solid #ddd;
+                  text-align: left;
+              }
+          }
+      }
+  }
+}

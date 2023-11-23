@@ -1,0 +1,27 @@
+<!-- FILEPATH: /home/benjamin/code/Benyoumen/SHOWCONNECT/app/views/appointments/edit.html.erb -->
+
+<h1>Edit Appointment</h1>
+
+<%= form_for @appointment, url: appointment_path(@appointment), method: :patch do |f| %>
+  <div>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+
+  <div>
+    <%= f.label :description %>
+    <%= f.text_area :description %>
+  </div>
+
+  <div>
+    <%= f.label :date %>
+    <%= f.date_field :date %>
+  </div>
+
+  <div>
+    <%= f.label :time %>
+    <%= f.time_field :time %>
+  </div>
+
+  <%= f.submit "Update Appointment" %>
+<% end %>
