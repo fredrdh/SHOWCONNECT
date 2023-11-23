@@ -6,6 +6,7 @@
   align-items: center;
   padding: 0.5rem 2rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
 
   .navbar-logo {
     img {
@@ -20,9 +21,10 @@
       list-style: none;
       display: flex;
       margin: 0;
+      padding: 0;
 
       li {
-          margin-left: 350px;
+        margin-left: 50px;
 
           a {
               color:#20273E;

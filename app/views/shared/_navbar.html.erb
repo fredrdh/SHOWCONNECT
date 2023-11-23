@@ -1,32 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Navbar Example</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <nav class="navbar">
-        <div class="navbar-logo">
-            <%= link_to root_path do %>
-                <%= image_tag 'logo-ok.png', alt: 'Logo' %>
-            <% end %>
-        </div>
+<div class="navbar">
+  <div class="navbar-logo">
+      <%= link_to root_path do %>
+         <%= image_tag 'logo-ok.png', alt: 'Logo' %>
+      <% end %>
+  </div>
+  <ul class="navbar-links">
+      <li> <%= link_to "Categories", events_path %></li>
+      <li><a href="#">Contact</a></li>
 
-        </div>
-        <ul class="navbar-links">
-            <li> <%= link_to "Categories", events_path %></li>
-            <li><a href="#">Contact</a></li>
-
-           <li> <% if current_user  %>
-              <%= link_to "Logout", destroy_user_session_path, data: {turbo_method: :delete} %>
-            <% else %>
-              <%= link_to "Login", new_user_session_path %>
-            <% end %></li>
-
-
-        </ul>
-    </nav>
-</body>
-</html>
+      <li> <% if current_user  %>
+        <%= link_to "Logout", destroy_user_session_path, data: {turbo_method: :delete} %>
+      <% else %>
+        <%= link_to "Login", new_user_session_path %>
+      <% end %></li>
+  </ul>
+</div>
