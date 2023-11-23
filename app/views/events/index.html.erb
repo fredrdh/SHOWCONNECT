@@ -11,15 +11,16 @@
 <%# <% end %>
 <%# Assuming you have a header and other common elements included in your application layout %>
 
-<%# index.html.erb %>
+
 <%# index.html.erb %>
 <div class="events-container">
   <% @events.each do |event| %>
     <div class="event-card">
       <h2 class="event-title"><%= event.stage_name %></h2>
-      <%# <%= image_tag event.image_url, class: "event-image" if event.image_url.present? %> 
+      <%# <%= image_tag event.image_url, class: "event-image" if event.image_url.present? %>
 
       <div class="event-info">
+      <img src="https://www12.senado.leg.br/radio/1/capitulo-rock/2020/01/31/guns-n2019-roses/guns_n_roses.jpg/@@images/24c8f793-0823-4756-b0e7-3c1f1b71fb1e.jpeg" class="card-img-top" alt="...">
         <p><i class="icon-category"></i> <strong>Categoria:</strong> <%= event.category %></p>
         <p><i class="icon-specialty"></i> <strong>Especialidade:</strong> <%= event.specialty %></p>
         <p><i class="icon-description"></i> <strong>Descrição:</strong> <%= event.description %></p>
@@ -31,4 +32,15 @@
       <%= link_to "See More", event_path(event), class: "btn btn-primary" %>
     </div>
   <% end %>
+
+
+
+  <%# <div class="card" style="width: 18rem;">
+  <img src="https://www12.senado.leg.br/radio/1/capitulo-rock/2020/01/31/guns-n2019-roses/guns_n_roses.jpg/@@images/24c8f793-0823-4756-b0e7-3c1f1b71fb1e.jpeg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div> %>
 </div>
