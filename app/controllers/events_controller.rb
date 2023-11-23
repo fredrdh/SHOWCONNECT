@@ -1,4 +1,5 @@
 class EventsController < ApplicationController
+  before_action :authenticate_user!, only: [:destroy, :create, :new, :edit, :update]
 
   def index
     @events = Event.all
@@ -36,7 +37,7 @@ class EventsController < ApplicationController
   def destroy
     @event = Event.find(params[:id])
     @event.destroy
-    redirect_to events_path
+    redirect_to events_path, notice: 'Event was successfully destroyed.'
   end
 
 
