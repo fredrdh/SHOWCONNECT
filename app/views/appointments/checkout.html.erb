@@ -1,0 +1,12 @@
+    <section>
+      <div class="product">
+        <%= image_tag "https://i.imgur.com/EHyR2nP.png", alt: "The cover of Stubborn Attachments" %>
+        <div class="description">
+          <h3>Stubborn Attachments</h3>
+          <h5>$20.00</h5>
+        </div>
+      </div>
+      <%= form_tag '/create-checkout-session', method: :post do %>
+        <%= submit_tag 'Checkout', id: 'checkout-button' %>
+      <% end %>
+    </section>
