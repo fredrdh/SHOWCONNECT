@@ -10,6 +10,7 @@ end
 
 def new
   @appointment = Appointment.new
+ end
 
 def create
   @appointment = Appointment.new(appointment_params)
@@ -39,7 +40,7 @@ end
 
   private
 
-  def appointment_params
-    params.require(:appointment).permit(:stage_name, :category, :specialty, :description, :local, :event_date, :price)
-  end
+def appointment_params
+  params.require(:appointment).permit(:stage_name, :category, :specialty, :description, :local, :event_date, :price)
+end
 end

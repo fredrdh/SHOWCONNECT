@@ -1,0 +1,13 @@
+<!-- FILEPATH: /home/benjamin/code/Benyoumen/SHOWCONNECT/app/views/appointments/show.html.erb -->
+
+<div class="appointment-details-container">
+  <h1 class="appointment-details-title">Appointment Details</h1>
+
+  <div class="appointment-info">
+    <p><strong>Date:</strong> <%= @appointment.timeslot ? @appointment.timeslot.to_date : 'No date set' %></p>
+    <p><strong>Time:</strong> <%= @appointment.timeslot ? @appointment.timeslot.strftime("%H:%M") : 'No time set' %></p>
+    <!-- Add more appointment details as needed -->
+  </div>
+
+  <!-- You can also add links or buttons to edit or delete the appointment -->
+</div>
