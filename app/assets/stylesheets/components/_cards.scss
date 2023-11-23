@@ -1,0 +1,17 @@
+.card-img-top {
+  height: 180px;
+  object-fit: cover ;
+}
+.event-title {
+  height: 100px;
+  text-align: center;
+}
+.event-info {
+  height: 400px;
+}
+.event-detail-container  {
+  height: 700px;
+  .card-img-top {
+    height: 280px;
+  }
+}

@@ -20,7 +20,11 @@
       <%# <%= image_tag event.image_url, class: "event-image" if event.image_url.present? %>
 
       <div class="event-info">
-      <img src="https://www12.senado.leg.br/radio/1/capitulo-rock/2020/01/31/guns-n2019-roses/guns_n_roses.jpg/@@images/24c8f793-0823-4756-b0e7-3c1f1b71fb1e.jpeg" class="card-img-top" alt="...">
+      <% if event.photo.key  %>
+        <%= cl_image_tag event.photo.key, class: "card-img-top" %>
+      <% else %>
+        <%= image_tag "https://images.unsplash.com/photo-1604177052603-c2b4cff228db?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c2hvd3xlbnwwfHwwfHx8MA%3D%3D",class: "card-img-top" %>
+        <% end %>
         <p><i class="icon-category"></i> <strong>Categoria:</strong> <%= event.category %></p>
         <p><i class="icon-specialty"></i> <strong>Especialidade:</strong> <%= event.specialty %></p>
         <p><i class="icon-description"></i> <strong>Descrição:</strong> <%= event.description %></p>
