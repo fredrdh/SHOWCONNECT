@@ -80,8 +80,12 @@ header {
 }
 
 footer {
-  background-color: #fff;
-  color:#20273E;
-  text-align: center;
-  padding: 1rem 0;
-}
+    background-color: #fff;
+    color:#20273E;
+    text-align: center;
+    padding: 1rem 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+

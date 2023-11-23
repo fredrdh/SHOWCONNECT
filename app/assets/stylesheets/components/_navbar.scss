@@ -21,10 +21,13 @@
       list-style: none;
       display: flex;
       margin: 0;
+      display: flex;
       padding: 0;
 
       li {
-        margin-left: 50px;
+        display: flex;
+        margin-left: 250px;
+        justify-content: space-between;
 
           a {
               color:#20273E;
