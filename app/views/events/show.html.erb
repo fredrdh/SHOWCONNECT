@@ -10,8 +10,9 @@
     <p class="event-detail"><strong>Location:</strong> <%= @event.local %></p>
     <p class="event-detail"><strong>Date:</strong> <%= @event.event_date.strftime("%d %B %Y") %></p>
     <p class="event-detail"><strong>Price:</strong> <%= number_to_currency(@event.price, unit: "R$ ", separator: ",", delimiter: ".") %></p>
+
   </div>
- <% if @event.photo.key  %>
+ <% if @event.photo.key %>
     <%= cl_image_tag @event.photo.key, class: "card-img-top" %>
   <% else %>
     <%= image_tag "https://images.unsplash.com/photo-1604177052603-c2b4cff228db?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c2hvd3xlbnwwfHwwfHx8MA%3D%3D",class: "card-img-top" %>
