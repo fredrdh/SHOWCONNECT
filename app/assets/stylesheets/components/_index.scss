@@ -96,37 +96,23 @@
       }
   }
 }
-.event-detail-container {
-  max-width: 800px;
-  margin: 20px auto;
+// Design of the checkout page in the Views of Events
+.checkout-container {
+  display: flex;
+  justify-content: space-between;
   padding: 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  background: white;
-  border-radius: 5px;
 
-  .event-detail-title {
-      color: #333;
-      text-align: center;
-      margin-bottom: 20px;
+  .event-summary, .payment-section {
+    flex: 1;
+    margin-right: 10px; // Adjust margin as needed
   }
 
-  .event-detail-card {
-      padding: 15px;
-      border: 1px solid #ddd;
-      border-radius: 5px;
+  .event-detail-container {
+    // Existing styles for event details
+  }
 
-      .event-stage-name {
-          color: #007bff;
-          margin-bottom: 15px;
-      }
-
-      .event-detail {
-          color: #666;
-          margin: 10px 0;
-
-          strong {
-              color: #333;
-          }
-      }
+  .payment-section {
+    // Styles for the Stripe payment section
   }
 }
+

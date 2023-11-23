@@ -1,9 +1,8 @@
 class Appointment < ApplicationRecord
   belongs_to :user
   belongs_to :event
-  validates :timeslot, presence: true
-  validates :timeslot, uniqueness: { scope: :event_id }
-  validate :timeslot_cannot_be_in_the_past
+  # validates :timeslot, presence: true
+  # validates :timeslot, uniqueness: { scope: :event_id }
   attr_accessor :title, :start, :end, :url
   attr_accessor :start_time, :end_time
   attr_accessor :description, :location, :price

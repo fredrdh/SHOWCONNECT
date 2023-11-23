@@ -6,6 +6,7 @@ class EventsController < ApplicationController
 
   def show
     @event = Event.find(params[:id])
+    @appointment = Appointment.new
   end
 
   def new
@@ -37,6 +38,7 @@ class EventsController < ApplicationController
     @event.destroy
     redirect_to events_path
   end
+
 
   private
 
