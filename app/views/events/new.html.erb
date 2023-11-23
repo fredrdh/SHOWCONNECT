@@ -3,7 +3,7 @@
 <div class="new-event-container">
   <h1 class="new-event-title">New Event</h1>
 
-  <%= simple_form_for @event, url: events_path, method: :post, html: { class: 'new-event-form' } do |f| %>
+  <%= simple_form_for( @event, html: { class: 'new-event-form' } ) do |f| %>
 
     <%= f.input :stage_name, label_html: { class: 'form-label' }, input_html: { class: 'form-input' } %>
 
@@ -19,6 +19,8 @@
 
     <%= f.input :price, as: :string, label_html: { class: 'form-label' }, input_html: { class: 'form-input', placeholder: 'R$' } %>
 
+    <%= f.input :photo, as: :file %>
+    
     <%= f.button :submit, "Create Event", class: 'btn-submit' %>
 
   <% end %>
