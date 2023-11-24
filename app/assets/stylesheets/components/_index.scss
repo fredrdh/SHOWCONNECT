@@ -9,6 +9,9 @@
   font-size: 22px;
   font-family: Arial
 }
+.navbar {
+  position:fixed;
+}
 .container {
   margin: 20px 40px;
   padding: 8px 20px;
@@ -25,9 +28,9 @@
 
 .events-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 20px;
-  padding: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 14px;
+  padding: 102px;
 }
 
 .event-card {
@@ -55,13 +58,6 @@
   .event-info {
       p {
           margin: 5px 0;
-          display: flex;
-          align-items: center;
-
-          i {
-              margin-right: 5px;
-              // Add more styles or classes for icons
-          }
       }
   }
 
@@ -125,7 +121,7 @@
   background-color: #ddd;
   padding: 20px 0;
   position:sticky;
-  top: 0px;
+  top: 97px;
 }
 
  .h1-Categories {

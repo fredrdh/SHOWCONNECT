@@ -13,11 +13,17 @@
   text-align: center;
 }
 .event-info {
-  height: 400px;
+  height: 500px;
+}
+.margin-top-200 {
+  padding-top: 150px;
+  padding-bottom: 50px;
+  background-color: #ddd;
 }
 .event-detail-container  {
+
   border:1px solid #dbd8d8;
-  height: 640px;
+  
   .card-img-top {
     height: 212px;
   }
