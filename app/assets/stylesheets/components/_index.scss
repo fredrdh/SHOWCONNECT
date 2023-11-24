@@ -84,11 +84,22 @@
   }
 
   .event-detail-container {
+      width: 70%;
+      padding: 20px;
+      background-color: white;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     // Existing styles for event details
   }
 
-  .payment-section {
+  .payment-section {  // Styles for the Stripe payment section
+      width: 30%;
+      padding: 20px;
+      background-color: white;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     // Styles for the Stripe payment section
   }
 }
-
