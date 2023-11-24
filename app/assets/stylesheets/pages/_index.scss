@@ -196,7 +196,7 @@ body {
 // here is the styling for the "Show page" of Appointments
 .appointment-details-container {
   max-width: 600px;
-  margin: 20px auto;
+  margin: 100px auto;
   padding: 20px;
   background: white;
   border-radius: 5px;
@@ -296,7 +296,7 @@ body {
   max-width: 800px;
   margin: 20px auto;
   padding: 20px;
-  background: white;
+
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   text-align: left;
@@ -335,4 +335,9 @@ body {
           }
       }
   }
+}
+.background-confirmação-de-evento {
+  background-color: #ddd;
+  height: 100vh;
+  padding-top: 100px;
 }
