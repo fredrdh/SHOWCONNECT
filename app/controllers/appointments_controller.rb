@@ -6,12 +6,6 @@ end
 
 def show
   @appointment = Appointment.find(params[:id])
-  # Stripe::Charge.create({
-    # amount: 1000, # amount in cents
-    # currency: 'usd',
-    # source: params[:stripeToken], # obtained with Stripe.js
-    # description: 'Example Charge',
-  # })
 end
 
 def new
@@ -52,9 +46,17 @@ def checkout
   @appointment = Appointment.find(params[:appointment_id])
 end
 
+# def date
+#   timeslot.to_date
+# end
+
+# def time
+#   timeslot.strftime("%H:%M")
+# end
+
   private
 
 def appointment_params
-  params.require(:appointment).permit(:event_id, :user_id)
+  params.require(:appointment).permit(:event_id, :user_id, :timeslot)
 end
 end

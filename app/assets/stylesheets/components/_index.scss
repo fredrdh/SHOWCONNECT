@@ -103,3 +103,30 @@
     // Styles for the Stripe payment section
   }
 }
+
+.appointment-card {
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+
+  h1 {
+    margin-bottom: 10px;
+  }
+}
+
+.details {
+  display: flex;
+  align-items: center;
+
+  .date,
+  .time {
+    margin-right: 25px;
+  }
+}
+
+.btn {
+  border-radius: 40px;
+}
+
+
