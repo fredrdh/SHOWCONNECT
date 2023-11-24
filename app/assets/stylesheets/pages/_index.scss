@@ -178,10 +178,12 @@ img  background-image{
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   text-align: left;
 
+
   .appointment-details-title {
       color: #333;
       text-align: center;
       margin-bottom: 20px;
+
   }
 
   .appointment-info {
@@ -195,6 +197,7 @@ img  background-image{
       }
   }
 }
+
 // here is the styling for the "New page" of Events
 .appointment-form-container, .appointment-list-container {
   max-width: 800px;

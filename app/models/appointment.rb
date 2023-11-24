@@ -1,6 +1,7 @@
 class Appointment < ApplicationRecord
   belongs_to :user
   belongs_to :event
+
   # validates :timeslot, presence: true
   # validates :timeslot, uniqueness: { scope: :event_id }
   attr_accessor :title, :start, :end, :url
