@@ -10,8 +10,8 @@
     <p class="event-detail"><strong>Location:</strong> <%= @event.local %></p>
     <p class="event-detail"><strong>Date:</strong> <%= @event.event_date.strftime("%d %B %Y") %></p>
     <p class="event-detail"><strong>Price:</strong> <%= number_to_currency(@event.price, unit: "R$ ", separator: ",", delimiter: ".") %></p>
-    <button class="btn-primary"><%= link_to "Edit", edit_event_path %></button>
-    <button class="btn-primary"><%= link_to 'Delete', event_path, data: { "turbo-method": :delete, turbo_confirm: "Are you sure?" } %>
+    <button class="btn-primary-edit"><%= link_to "Edit", edit_event_path %></button>
+    <button class="btn-primary-delete"><%= link_to 'Delete', event_path, data: { "turbo-method": :delete, turbo_confirm: "Are you sure?" } %>
 
   </div>
  <% if @event.photo.key %>

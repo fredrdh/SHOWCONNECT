@@ -1,7 +1,13 @@
 .card-img-top {
   height: 180px;
   object-fit: cover ;
+  border-radius: 2%;
 }
+
+.dropdown-menu.show {
+  border-radius: 10%;
+}
+
 .event-title {
   height: 100px;
   text-align: center;
@@ -10,8 +16,33 @@
   height: 400px;
 }
 .event-detail-container  {
-  height: 700px;
+  border:1px solid #dbd8d8;
+  height: 640px;
   .card-img-top {
-    height: 280px;
+    height: 212px;
+  }
+  .btn-primary-edit {
+    width: 100px;
+    color: #fff;
+    background-color: green;
+    border-color: black;
+    border-radius: 8%;
+    a {
+      text-decoration: none;
+      color: #fff;
+    }
+  }
+  .btn-primary-delete {
+    width: 100px;
+    color: #fff;
+    background-color: red;
+    border-color: black;
+    border-radius: 8%;
+    margin-left: 520px;
+
+    a {
+      text-decoration: none;
+      color: #fff;
+    }
   }
 }
