@@ -137,10 +137,11 @@ body {
   }
 
 .new-event-container {
-  max-width: 800px;
+  // padding-top: 120px;
+  // padding-bottom: 50px;
   margin: 20px auto;
-  padding: 20px;
-  background: white;
+  padding: 120px 20px 50px 20px;
+  background: #ddd;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
@@ -151,6 +152,8 @@ body {
   }
 
   .new-event-form {
+    margin: auto;
+      max-width: 800px;
       display: flex;
       flex-direction: column;
       gap: 15px;
