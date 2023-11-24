@@ -1,19 +1,9 @@
-<%# <% @events.each do |event| %>
-<%# <div> %>
-  <%# <h2><%= event.stage_name %>
-  <%# <p><strong>Categoria:</strong> <%= event.category %>
-  <%# <p><strong>Especialidade:</strong> <%= event.local %>
-  <%# <p><strong>Descrição:</strong> <%= event.description %>
-  <%# <p><strong>Local:</strong> <%= event.local %>
-  <%# <p><strong>Data:</strong> <%= event.event_date%>
-  <%# <p><strong>Preço:</strong> <%= event.price %>
-<%# </div> %>
-<%# <% end %>
-<%# Assuming you have a header and other common elements included in your application layout %>
 
 
-<%# index.html.erb %>
+<%#
+ colocar em cada item  de categoria um link para a sessao correspondente na mesma pagina  %>
 
+ <%# CARD DJ  //////////////////// ////////////////// %>
 
 <div> <h1 class="h1-Categories">Dj's</h1>
 <div class="events-container">
@@ -40,6 +30,7 @@
     </div>
   <% end %>
   </div>
+               <%# CARD MAGIC ///////////////////////////////////// %>
 
   <div> <h1 class="h1-Categories">Magic</h1>
 <div class="events-container">
@@ -66,7 +57,7 @@
     </div>
   <% end %>
   </div>
-
+<%# ////////////////////////////// CARD HUMOR //////////////////////// %>
    <div> <h1 class="h1-Categories" >Humor</h1>
 <div class="events-container">
   <% @events.each do |event| %>
