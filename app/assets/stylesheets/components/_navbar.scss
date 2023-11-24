@@ -16,6 +16,28 @@
       font-weight: bold;
   }
 
+.search-dropdown .custom-dropdown-btn {
+  color: black;
+  background-color: transparent;
+  position: absolute;
+  left: 90px;
+  top: -4px;
+  height: 38px;
+}
+.search-dropdown .custom-dropdown-btn:focus {
+  outline: none;
+  box-shadow: none;
+}
+.search-dropdown .form-control {
+  border-radius: 2%;
+}
+.search-dropdown .custom-dropdown-btn {
+  height: 38px;
+}
+.search-dropdown .input-group {
+  width: 112%;
+  position: relative;
+}
 
   .navbar-links {
       list-style: none;

@@ -1,18 +1,11 @@
-<%# <% @events.each do |event| %>
-<%# <div> %>
-  <%# <h2><%= event.stage_name %>
-  <%# <p><strong>Categoria:</strong> <%= event.category %>
-  <%# <p><strong>Especialidade:</strong> <%= event.local %>
-  <%# <p><strong>Descrição:</strong> <%= event.description %>
-  <%# <p><strong>Local:</strong> <%= event.local %>
-  <%# <p><strong>Data:</strong> <%= event.event_date%>
-  <%# <p><strong>Preço:</strong> <%= event.price %>
-<%# </div> %>
-<%# <% end %>
-<%# Assuming you have a header and other common elements included in your application layout %>
 
 
-<%# index.html.erb %>
+<%#
+ colocar em cada item  de categoria um link para a sessao correspondente na mesma pagina  %>
+
+ <%# CARD DJ  //////////////////// ////////////////// %>
+
+<div> <h1 class="h1-Categories">Dj's</h1>
 <div class="events-container">
   <% @events.each do |event| %>
     <div class="event-card">
@@ -36,6 +29,191 @@
       <%= link_to "See More", event_path(event), class: "btn btn-primary" %>
     </div>
   <% end %>
+  </div>
+               <%# CARD MAGIC ///////////////////////////////////// %>
+
+  <div> <h1 class="h1-Categories">Magic</h1>
+<div class="events-container">
+  <% @events.each do |event| %>
+    <div class="event-card">
+      <h2 class="event-title"><%= event.stage_name %></h2>
+      <%# <%= image_tag event.image_url, class: "event-image" if event.image_url.present? %>
+
+      <div class="event-info">
+      <% if event.photo.key  %>
+        <%= cl_image_tag event.photo.key, class: "card-img-top" %>
+      <% else %>
+        <%= image_tag "https://images.unsplash.com/photo-1604177052603-c2b4cff228db?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c2hvd3xlbnwwfHwwfHx8MA%3D%3D",class: "card-img-top" %>
+        <% end %>
+        <p><i class="icon-category"></i> <strong>Categoria:</strong> <%= event.category %></p>
+        <p><i class="icon-specialty"></i> <strong>Especialidade:</strong> <%= event.specialty %></p>
+        <p><i class="icon-description"></i> <strong>Descrição:</strong> <%= event.description %></p>
+        <p><i class="icon-location"></i> <strong>Local:</strong> <%= event.local %></p>
+        <p><i class="icon-date"></i> <strong>Data:</strong> <%= l(event.event_date, format: :long) %></p>
+        <p><i class="icon-price"></i> <strong>Preço:</strong> <%= number_to_currency(event.price, unit: "R$ ", separator: ",", delimiter: ".") %></p>
+      </div>
+
+      <%= link_to "See More", event_path(event), class: "btn btn-primary" %>
+    </div>
+  <% end %>
+  </div>
+<%# ////////////////////////////// CARD HUMOR //////////////////////// %>
+   <div> <h1 class="h1-Categories" >Humor</h1>
+<div class="events-container">
+  <% @events.each do |event| %>
+    <div class="event-card">
+      <h2 class="event-title"><%= event.stage_name %></h2>
+      <%# <%= image_tag event.image_url, class: "event-image" if event.image_url.present? %>
+
+      <div class="event-info">
+      <% if event.photo.key  %>
+        <%= cl_image_tag event.photo.key, class: "card-img-top" %>
+      <% else %>
+        <%= image_tag "https://images.unsplash.com/photo-1604177052603-c2b4cff228db?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c2hvd3xlbnwwfHwwfHx8MA%3D%3D",class: "card-img-top" %>
+        <% end %>
+        <p><i class="icon-category"></i> <strong>Categoria:</strong> <%= event.category %></p>
+        <p><i class="icon-specialty"></i> <strong>Especialidade:</strong> <%= event.specialty %></p>
+        <p><i class="icon-description"></i> <strong>Descrição:</strong> <%= event.description %></p>
+        <p><i class="icon-location"></i> <strong>Local:</strong> <%= event.local %></p>
+        <p><i class="icon-date"></i> <strong>Data:</strong> <%= l(event.event_date, format: :long) %></p>
+        <p><i class="icon-price"></i> <strong>Preço:</strong> <%= number_to_currency(event.price, unit: "R$ ", separator: ",", delimiter: ".") %></p>
+      </div>
+
+      <%= link_to "See More", event_path(event), class: "btn btn-primary" %>
+    </div>
+  <% end %>
+  </div>
+
+    <div> <h1 class="h1-Categories" >Singers</h1>
+<div class="events-container">
+  <% @events.each do |event| %>
+    <div class="event-card">
+      <h2 class="event-title"><%= event.stage_name %></h2>
+      <%# <%= image_tag event.image_url, class: "event-image" if event.image_url.present? %>
+
+      <div class="event-info">
+      <% if event.photo.key  %>
+        <%= cl_image_tag event.photo.key, class: "card-img-top" %>
+      <% else %>
+        <%= image_tag "https://images.unsplash.com/photo-1604177052603-c2b4cff228db?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c2hvd3xlbnwwfHwwfHx8MA%3D%3D",class: "card-img-top" %>
+        <% end %>
+        <p><i class="icon-category"></i> <strong>Categoria:</strong> <%= event.category %></p>
+        <p><i class="icon-specialty"></i> <strong>Especialidade:</strong> <%= event.specialty %></p>
+        <p><i class="icon-description"></i> <strong>Descrição:</strong> <%= event.description %></p>
+        <p><i class="icon-location"></i> <strong>Local:</strong> <%= event.local %></p>
+        <p><i class="icon-date"></i> <strong>Data:</strong> <%= l(event.event_date, format: :long) %></p>
+        <p><i class="icon-price"></i> <strong>Preço:</strong> <%= number_to_currency(event.price, unit: "R$ ", separator: ",", delimiter: ".") %></p>
+      </div>
+
+      <%= link_to "See More", event_path(event), class: "btn btn-primary" %>
+    </div>
+  <% end %>
+  </div>
+
+     <div> <h1 class="h1-Categories" >Dance</h1>
+<div class="events-container">
+  <% @events.each do |event| %>
+    <div class="event-card">
+      <h2 class="event-title"><%= event.stage_name %></h2>
+      <%# <%= image_tag event.image_url, class: "event-image" if event.image_url.present? %>
+
+      <div class="event-info">
+      <% if event.photo.key  %>
+        <%= cl_image_tag event.photo.key, class: "card-img-top" %>
+      <% else %>
+        <%= image_tag "https://images.unsplash.com/photo-1604177052603-c2b4cff228db?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c2hvd3xlbnwwfHwwfHx8MA%3D%3D",class: "card-img-top" %>
+        <% end %>
+        <p><i class="icon-category"></i> <strong>Categoria:</strong> <%= event.category %></p>
+        <p><i class="icon-specialty"></i> <strong>Especialidade:</strong> <%= event.specialty %></p>
+        <p><i class="icon-description"></i> <strong>Descrição:</strong> <%= event.description %></p>
+        <p><i class="icon-location"></i> <strong>Local:</strong> <%= event.local %></p>
+        <p><i class="icon-date"></i> <strong>Data:</strong> <%= l(event.event_date, format: :long) %></p>
+        <p><i class="icon-price"></i> <strong>Preço:</strong> <%= number_to_currency(event.price, unit: "R$ ", separator: ",", delimiter: ".") %></p>
+      </div>
+
+      <%= link_to "See More", event_path(event), class: "btn btn-primary" %>
+    </div>
+  <% end %>
+  </div>
+
+   <div> <h1 class="h1-Categories" >Workshops</h1>
+<div class="events-container">
+  <% @events.each do |event| %>
+    <div class="event-card">
+      <h2 class="event-title"><%= event.stage_name %></h2>
+      <%# <%= image_tag event.image_url, class: "event-image" if event.image_url.present? %>
+
+      <div class="event-info">
+      <% if event.photo.key  %>
+        <%= cl_image_tag event.photo.key, class: "card-img-top" %>
+      <% else %>
+        <%= image_tag "https://images.unsplash.com/photo-1604177052603-c2b4cff228db?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c2hvd3xlbnwwfHwwfHx8MA%3D%3D",class: "card-img-top" %>
+        <% end %>
+        <p><i class="icon-category"></i> <strong>Categoria:</strong> <%= event.category %></p>
+        <p><i class="icon-specialty"></i> <strong>Especialidade:</strong> <%= event.specialty %></p>
+        <p><i class="icon-description"></i> <strong>Descrição:</strong> <%= event.description %></p>
+        <p><i class="icon-location"></i> <strong>Local:</strong> <%= event.local %></p>
+        <p><i class="icon-date"></i> <strong>Data:</strong> <%= l(event.event_date, format: :long) %></p>
+        <p><i class="icon-price"></i> <strong>Preço:</strong> <%= number_to_currency(event.price, unit: "R$ ", separator: ",", delimiter: ".") %></p>
+      </div>
+
+      <%= link_to "See More", event_path(event), class: "btn btn-primary" %>
+    </div>
+  <% end %>
+  </div>
+
+     <div> <h1 class="h1-Categories" >Gastronomy</h1>
+<div class="events-container">
+  <% @events.each do |event| %>
+    <div class="event-card">
+      <h2 class="event-title"><%= event.stage_name %></h2>
+      <%# <%= image_tag event.image_url, class: "event-image" if event.image_url.present? %>
+
+      <div class="event-info">
+      <% if event.photo.key  %>
+        <%= cl_image_tag event.photo.key, class: "card-img-top" %>
+      <% else %>
+        <%= image_tag "https://images.unsplash.com/photo-1604177052603-c2b4cff228db?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c2hvd3xlbnwwfHwwfHx8MA%3D%3D",class: "card-img-top" %>
+        <% end %>
+        <p><i class="icon-category"></i> <strong>Categoria:</strong> <%= event.category %></p>
+        <p><i class="icon-specialty"></i> <strong>Especialidade:</strong> <%= event.specialty %></p>
+        <p><i class="icon-description"></i> <strong>Descrição:</strong> <%= event.description %></p>
+        <p><i class="icon-location"></i> <strong>Local:</strong> <%= event.local %></p>
+        <p><i class="icon-date"></i> <strong>Data:</strong> <%= l(event.event_date, format: :long) %></p>
+        <p><i class="icon-price"></i> <strong>Preço:</strong> <%= number_to_currency(event.price, unit: "R$ ", separator: ",", delimiter: ".") %></p>
+      </div>
+
+      <%= link_to "See More", event_path(event), class: "btn btn-primary" %>
+    </div>
+  <% end %>
+  </div>
+
+   <div> <h1 class="h1-Categories" >Support</h1>
+<div class="events-container">
+  <% @events.each do |event| %>
+    <div class="event-card">
+      <h2 class="event-title"><%= event.stage_name %></h2>
+      <%# <%= image_tag event.image_url, class: "event-image" if event.image_url.present? %>
+
+      <div class="event-info">
+      <% if event.photo.key  %>
+        <%= cl_image_tag event.photo.key, class: "card-img-top" %>
+      <% else %>
+        <%= image_tag "https://images.unsplash.com/photo-1604177052603-c2b4cff228db?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c2hvd3xlbnwwfHwwfHx8MA%3D%3D",class: "card-img-top" %>
+        <% end %>
+        <p><i class="icon-category"></i> <strong>Categoria:</strong> <%= event.category %></p>
+        <p><i class="icon-specialty"></i> <strong>Especialidade:</strong> <%= event.specialty %></p>
+        <p><i class="icon-description"></i> <strong>Descrição:</strong> <%= event.description %></p>
+        <p><i class="icon-location"></i> <strong>Local:</strong> <%= event.local %></p>
+        <p><i class="icon-date"></i> <strong>Data:</strong> <%= l(event.event_date, format: :long) %></p>
+        <p><i class="icon-price"></i> <strong>Preço:</strong> <%= number_to_currency(event.price, unit: "R$ ", separator: ",", delimiter: ".") %></p>
+      </div>
+
+      <%= link_to "See More", event_path(event), class: "btn btn-primary" %>
+    </div>
+  <% end %>
+  </div>
+
 
 
 

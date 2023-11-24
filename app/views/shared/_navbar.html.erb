@@ -1,17 +1,52 @@
 <div class="navbar">
   <div class="navbar-logo">
-      <%= link_to root_path do %>
-         <%= image_tag 'logo-ok.png', alt: 'Logo' %>
-      <% end %>
+    <%= link_to root_path do %>
+      <%= image_tag 'logo-ok.png', alt: 'Logo' %>
+    <% end %>
   </div>
   <ul class="navbar-links">
-      <li> <%= link_to "Categories", events_path %></li>
-      <li><a href="#">Contact</a></li>
-
-      <li> <% if current_user  %>
+    <li class="search-dropdown">
+      <div class="input-group" style="width: 104%;">
+        <%= text_field_tag :search, nil, placeholder: 'Search your category', class: 'form-control rounded-2' %>
+        <div class="input-group-append">
+          <button class="btn btn-outline-secondary custom-dropdown-btn" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fa-solid fa-caret-down" style="background-color: transparent;"></i>
+          </button>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">DJs</a>
+            <a class="dropdown-item" href="#">Magic</a>
+            <a class="dropdown-item" href="#">Humor</a>
+            <a class="dropdown-item" href="#">Singers</a>
+            <a class="dropdown-item" href="#">Dance</a>
+            <a class="dropdown-item" href="#">Workshops</a>
+            <a class="dropdown-item" href="#">Gastronomy</a>
+            <a class="dropdown-item" href="#">Support</a>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li class="dropdown">
+      <a href="#" class="dropdown-toggle" id="contactDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Contact
+      </a>
+      <div class="dropdown-menu" aria-labelledby="contactDropdown">
+        <a class="dropdown-item" href="https://api.whatsapp.com/send?phone=SEUNUMERODOTELEFONE" target="_blank">
+          <span class="icon"><i class="fa-brands fa-whatsapp"></i></span>
+          <span class="text">Whatsapp</span>
+        </a>
+        <a class="dropdown-item" href="mailto:seuemail@gmail.com" target="_blank">
+          <span class="icon"><i class="fa-regular fa-envelope"></i></span>
+          <span class="text">Email</span>
+        </a>
+      </div>
+    </li>
+    <li>
+      <% if current_user  %>
         <%= link_to "Logout", destroy_user_session_path, data: {turbo_method: :delete} %>
       <% else %>
         <%= link_to "Login", new_user_session_path %>
-      <% end %></li>
+      <% end %>
+    </li>
   </ul>
 </div>
+
