@@ -15,6 +15,13 @@
       font-size: 20px;
       font-weight: bold;
   }
+  .categories-dropdown {
+    position: fixed;
+    top: 60px; /* Altura da sua navbar */
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Ajuste conforme necessário para garantir que esteja acima de outros elementos */
+  }
 
 .search-dropdown .custom-dropdown-btn {
   color: black;
@@ -29,8 +36,10 @@
   box-shadow: none;
 }
 .search-dropdown .form-control {
-  border-radius: 2%;
+  border-radius: 2;
 }
+
+
 .search-dropdown .custom-dropdown-btn {
   height: 38px;
 }
@@ -38,6 +47,15 @@
   width: 112%;
   position: relative;
 }
+
+
+
+
+
+
+
+
+
 
   .navbar-links {
       list-style: none;
@@ -65,3 +83,23 @@
       }
   }
 }
+
+  // .navbar {
+  //   position: fixed;
+  //   top: 0;
+  //   width: 100%;
+  //   background-color: white;
+  //   color: black;
+  //   display: flex;
+  //   justify-content: space-between;
+  //   align-items: center;
+  //   padding: 0.5rem 2rem;
+  //   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  //   z-index: 1000; /* Adicione um valor de z-index para garantir que a barra de navegação fique acima de outros elementos */
+  // }
+
+  // body {
+  //   margin-top: 10px; /* Adicione uma margem superior igual à altura da barra de navegação */
+  // }
+
+  /* Restante dos estilos... */

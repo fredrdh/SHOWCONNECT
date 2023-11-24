@@ -14,6 +14,15 @@
   padding: 8px 20px;
 }
 
+#categoryDropdown {
+  border-radius: none;
+  width: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
 .events-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -32,7 +41,9 @@
   .event-title {
       color: #333;
       margin-bottom: 10px;
+      text-align: center;
   }
+
 
   .event-image {
       max-width: 100%;
@@ -102,7 +113,24 @@
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     // Styles for the Stripe payment section
   }
+
 }
+
+
+#dropdown-show {
+  border-radius: 0;
+}
+
+.bg-categories {
+  background-color: #ddd;
+  padding: 20px 0;
+  position:sticky;
+  top: 0px;
+}
+
+ .h1-Categories {
+    text-align: center;
+  }
 
 .appointment-card {
   padding: 20px;
