@@ -6,6 +6,7 @@ end
 
 def show
   @appointment = Appointment.find(params[:id])
+  # @event = Event.find(params[:id])
 end
 
 def new

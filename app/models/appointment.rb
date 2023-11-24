@@ -19,5 +19,4 @@ class Appointment < ApplicationRecord
   attr_accessor :event_date
   attr_accessor :price
   attr_accessor :timeslot
-  attr_accessor
 end

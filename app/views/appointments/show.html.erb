@@ -6,11 +6,10 @@
   <h1 class="appointment-details-title">Seu evento está confirmado</h1>
 
   <div class="appointment-info">
-    <p><strong>Date:</strong> <%= @appointment.timeslot ? @appointment.timeslot.to_date : 'No date set' %></p>
-    <p><strong>Time:</strong> <%= @appointment.timeslot ? @appointment.timeslot.strftime("%H:%M") : 'No time set' %></p>
-    <% raise %>
+    <p><strong>Date:</strong> <%= @appointment.event.event_date ? @appointment.event.event_date.strftime("%d %B %Y") : 'No date set' %></p>
     <% if @appointment.event %>
       <p><strong>Event:</strong> <%= @appointment.event.stage_name %></p>
+
       <p><strong>Price:</strong> <%= number_to_currency(@appointment.event.price, unit: "R$ ", separator: ",", delimiter: ".") %></p>
     <% else %>
       <p>No associated event</p>
