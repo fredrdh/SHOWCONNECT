@@ -1,17 +1,39 @@
 // Import page-specific CSS files here.
 @import "home";
 
+body {
+  background-color: rgb(255, 255, 255)
+}
+
+.card-img-top {
+  height: 50%;
+  object-fit: cover ;
+  border-radius: 2%;
+}
+
+// #photo {
+//   height: 0px;
+//   object-fit: cover ;
+//   border-radius: 2%;
+// }
+
+#new_appointment {
+  border: none;
+  text-align: center;
+  margin: none;
+  padding: none;
+}
 
 .navbar  {
   color:#E3382B;
   }
   .hero {
     color:#fff;
-    border: 1px solid #20273E;
+    // border: 1px solid #20273E;
     background-image: url(https://st.depositphotos.com/2230996/2388/i/450/depositphotos_23885249-stock-photo-magic-of-music.jpg);
   }
 
-img  background-image{
+.img background-image{
   width: 100vh;
 }
 .hero-content {
@@ -26,8 +48,8 @@ img  background-image{
 }
 
 .event-card {
-    background: white;
-    border: 1px solid #ddd;
+    background: rgb(247, 247, 247);
+    // border: 1px solid #ddd;
     border-radius: 5px;
     padding: 15px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -47,7 +69,7 @@ img  background-image{
 
     .event-info {
         i {
-            // Add styles for icons here
+          margin: 5px 0;// Add styles for icons here
         }
 
         p {
@@ -66,11 +88,11 @@ img  background-image{
 
 // design for the show.html.erb "Events Page"
 .event-detail-container {
-  max-width: 800px;
+  max-width: 400px;
   margin: 20px auto;
   padding: 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  background: white;
+  background: rgb(255, 255, 255);
   border-radius: 5px;
 
   .event-detail-title {
@@ -80,8 +102,8 @@ img  background-image{
   }
 
   .event-detail-card {
-      padding: 15px;
-      border: 1px solid #ddd;
+      padding: 5px;
+      // border: 1px solid #ddd;
       border-radius: 5px;
 
       .event-stage-name {
@@ -178,10 +200,12 @@ img  background-image{
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   text-align: left;
 
+
   .appointment-details-title {
       color: #333;
       text-align: center;
       margin-bottom: 20px;
+
   }
 
   .appointment-info {
@@ -195,6 +219,7 @@ img  background-image{
       }
   }
 }
+
 // here is the styling for the "New page" of Events
 .appointment-form-container, .appointment-list-container {
   max-width: 800px;
