@@ -1,4 +1,3 @@
-<!-- FILEPATH: /home/benjamin/code/Benyoumen/SHOWCONNECT/app/views/events/show.html.erb -->
 <div class="event-detail-container">
   <h1 class="event-detail-title">Event Details</h1>
 
@@ -10,8 +9,15 @@
     <p class="event-detail"><strong>Location:</strong> <%= @event.local %></p>
     <p class="event-detail"><strong>Date:</strong> <%= @event.event_date.strftime("%d %B %Y") %></p>
     <p class="event-detail"><strong>Price:</strong> <%= number_to_currency(@event.price, unit: "R$ ", separator: ",", delimiter: ".") %></p>
+
     <button class="btn-primary-edit"><%= link_to "Edit", edit_event_path %></button>
     <button class="btn-primary-delete"><%= link_to 'Delete', event_path, data: { "turbo-method": :delete, turbo_confirm: "Are you sure?" } %>
+
+ <%# // Checar redirecionamento para o checkout %>
+    <%# <%= link_to 'Contratar',appointments_path, class: 'btn-contratar', method: :post %>
+<%= simple_form_for [@event, @appointment], method: :post do |f| %>
+            <%= f.submit "Contratar", class:"btn-contratar"%>
+          <% end %>
 
   </div>
  <% if @event.photo.key %>
