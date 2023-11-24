@@ -50,29 +50,29 @@ label {
   padding: 12px 15px;
 }
 
-.btn {
-  padding: 12px 0;
-  font-size: 18px;
-  border-radius: 10px;
-  background: #5775f9;
-  color: #fff;
-  width: 100%;
-  border: none;
-  cursor: pointer;
+// .btn {
+// //   padding: 12px 0;
+// //   font-size: 18px;
+// //   border-radius: 10px;
+// //   background: #5775f9;
+// //   color: #fff;
+// //   width: 100%;
+//   border: 50%;
+// //   cursor: pointer;
 
-  &:hover {
-    background: darken(#5775f9, 5%);
-  }
-}
+//   //   &:hover {
+//   //     background: darken(#5775f9, 5%);
+//   //   }
+//   }
 
-.links {
-  margin-top: 20px;
-  text-align: center;
+// .links {
+//   margin-top: 20px;
+//   text-align: center;
 
-  a {
-    color: #5775f9;
-  }
-}
+//   a {
+//     color: #5775f9;
+//   }
+// }
 
 .login-form {
   max-width: 400px;

@@ -14,10 +14,10 @@ def show
   # })
 end
 
-# def new
-#   @appointment = Appointment.new
-#   raise
-#  end
+def new
+  @appointment = Appointment.new
+  raise
+ end
 
 def create
   @event = Event.find(params[:event_id])
