@@ -1,8 +1,9 @@
 <div class="event-detail-container">
-  <h1 class="event-detail-title">Event Details</h1>
+  <%# <h1 class="event-detail-title">Event Details</h1> %>
+  <h1 class="event-detail-title"><%= @event.stage_name %></h1>
 
   <div class="event-detail-card">
-    <h2 class="event-stage-name"><%= @event.stage_name %></h2>
+
     <p class="event-detail"><strong>Category:</strong> <%= @event.category %></p>
     <p class="event-detail"><strong>Specialty:</strong> <%= @event.specialty %></p>
     <p class="event-detail"><strong>Description:</strong> <%= @event.description %></p>
@@ -10,19 +11,19 @@
     <p class="event-detail"><strong>Date:</strong> <%= @event.event_date.strftime("%d %B %Y") %></p>
     <p class="event-detail"><strong>Price:</strong> <%= number_to_currency(@event.price, unit: "R$ ", separator: ",", delimiter: ".") %></p>
 
-    <button class="btn-primary-edit"><%= link_to "Edit", edit_event_path %></button>
-    <button class="btn-primary-delete"><%= link_to 'Delete', event_path, data: { "turbo-method": :delete, turbo_confirm: "Are you sure?" } %>
+    <%= link_to "Edit", edit_event_path, class: "btn btn-success rounded" %>
+    <%= link_to 'Delete', event_path, class: "btn btn-danger rounded", data: { "turbo-method": :delete, turbo_confirm: "Are you sure?" } %>
 
  <%# // Checar redirecionamento para o checkout %>
     <%# <%= link_to 'Contratar',appointments_path, class: 'btn-contratar', method: :post %>
-<%= simple_form_for [@event, @appointment], method: :post do |f| %>
-            <%= f.submit "Contratar", class:"btn-contratar"%>
-          <% end %>
+  <%= simple_form_for [@event, @appointment], method: :post do |f| %>
+    <%= f.submit "Contratar", class:"btn btn-primary rounded"%>
+  <% end %>
 
-  </div>
- <% if @event.photo.key %>
+  <% if @event.photo.key %>
     <%= cl_image_tag @event.photo.key, class: "card-img-top" %>
   <% else %>
     <%= image_tag "https://images.unsplash.com/photo-1604177052603-c2b4cff228db?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c2hvd3xlbnwwfHwwfHx8MA%3D%3D",class: "card-img-top" %>
   <% end %>
+  </div>
 </div>

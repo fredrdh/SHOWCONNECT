@@ -5,6 +5,26 @@
     <% end %>
   </div>
   <ul class="navbar-links">
+    <li class="search-dropdown">
+      <div class="input-group" style="width: 104%;">
+        <%= text_field_tag :search, nil, placeholder: 'Search your category', class: 'form-control rounded-2' %>
+        <div class="input-group-append">
+          <button class="btn btn-outline-secondary custom-dropdown-btn" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fa-solid fa-caret-down" style="background-color: transparent;"></i>
+          </button>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">DJs</a>
+            <a class="dropdown-item" href="#">Magic</a>
+            <a class="dropdown-item" href="#">Humor</a>
+            <a class="dropdown-item" href="#">Singers</a>
+            <a class="dropdown-item" href="#">Dance</a>
+            <a class="dropdown-item" href="#">Workshops</a>
+            <a class="dropdown-item" href="#">Gastronomy</a>
+            <a class="dropdown-item" href="#">Support</a>
+          </div>
+        </div>
+      </div>
+    </li>
     <li class="dropdown">
       <a href="#" class="dropdown-toggle" id="contactDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         Contact
